@@ -1,0 +1,270 @@
+.tabs-info__wrapper {
+	max-width: 1160px;
+	margin: auto;
+	padding: 0 16px;
+}
+
+.tabs-info {
+	position: relative;
+	overflow: hidden;
+	height: 1100px;
+	margin-bottom: -400px;
+}
+
+.tabs-info::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	width: 1443px;
+	height: 1088px;
+	background: url("../img/background-map.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	z-index: -1;
+}
+
+.tabs-info__list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.tabs-info__item {
+	position: relative;
+}
+
+.tabs-info__item-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.tabs-info__item-wrapper-image {
+	padding-right: 260px;
+	padding-top: 30px;
+}
+
+.tabs-info__item-title {
+	@include fonts(600, 55px, $basic-half-black, 90px);
+	letter-spacing: -1.25px;
+	position: relative;
+}
+
+.tabs-info__item-title::before {
+	content: "";
+	position: absolute;
+	width: 175px;
+	height: 3px;
+	background: $button-color;
+	bottom: -20px;
+}
+
+.tabs-info__item-caption {
+	@include fonts(400, 16px, $basic-half-black);
+	letter-spacing: -0.47px;
+	opacity: 0.7;
+	max-width: 370px;
+	padding-right: 20px;
+	margin-bottom: 40px;
+}
+
+.tabs-info__item-button {
+	@include fonts(700, 12px, $basic-white);
+	font-family: inherit;
+	text-transform: uppercase;
+	padding: 20px 56px;
+	border: 0;
+	background: $button-color;
+	cursor: pointer;
+}
+
+.tabs-info__item-button:hover {
+	background: $active-button;
+}
+
+.tabs-info__item-comment {
+	position: absolute;
+	width: 350px;
+	right: -20px;
+	top: 160px;
+	padding: 20px;
+	background: $basic-white;
+}
+
+.tabs-info__item-comment-title {
+	@include fonts(500, 30px, $basic-half-black, 36px);
+	letter-spacing: -0.6px;
+	margin: 0;
+	position: relative;
+	padding-bottom: 20px;
+}
+
+.tabs-info__item-comment-title::before {
+	content: "";
+	position: absolute;
+	width: 68px;
+	height: 1px;
+	background: $button-color;
+	top: 44px;
+}
+
+.tabs-info__item-comment-caption {
+	@include fonts(400, 14px, $basic-half-black);
+	opacity: 0.7;
+	letter-spacing: -0.4px;
+}
+
+.tabs-info__item-comment-autor {
+	@include fonts(500, 16px, $basic-half-black, 19px);
+	letter-spacing: -0.4px;
+	display: inline-block;
+	display: flex;
+	align-items: center;
+	margin-bottom: 0;
+}
+
+.tabs-info__item-comment-autor img {
+	padding-right: 16px;
+}
+
+
+@media (max-width: $half-desktop-size) {
+	.tabs-info {
+		height: auto;
+	}
+
+	.tabs-info__item-caption {
+		min-width: 360px;
+	}
+
+	.tabs-info__item-wrapper-image {
+		overflow: hidden;
+	}
+
+	.tabs-info {
+		margin-bottom: auto;
+
+	}
+
+	.tabs-info::before {
+		background: none;
+
+	}
+}
+
+@media (max-width: $tablet-size) {
+	.tabs-info__item-button:focus {
+		background: $active-button;
+	}
+
+	.tabs-info__item-wrapper {
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 50px;
+	}
+
+	.tabs-info__item-wrapper-image {
+		padding-right: 0;
+		padding-top: 30px;
+
+	}
+
+	.tabs-info__item-image {
+		width: 100%;
+	}
+
+	.tabs-info__item-title {
+		font-size: 33px;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	.tabs-info__item-title::before {
+		background: transparent;
+	}
+
+	.tabs-info__item-caption {
+		margin: auto;
+		max-width: 726px;
+		padding-right: 16px;
+		padding-left: 16px;
+		padding-bottom: 20px;
+	}
+
+	.tabs-info__item-comment {
+		position: relative;
+		top: -290px;
+	}
+
+	.tabs-info__item-button {
+		font-size: 10px;
+		font-weight: 500;
+		letter-spacing: 2px;
+		padding-top: 14px;
+		padding-bottom: 14px;
+	}
+
+	.tabs-info__item-wrapper-inner {
+		text-align: center;
+	}
+
+	.tabs-info__wrapper {
+		padding: 0 0 160px;
+	}
+}
+
+
+@media (max-width: $mobile-size) {
+	.tabs-info__item-wrapper-image {
+		width: 100%;
+		max-height: 415px;
+	}
+
+	.tabs-info__item-comment {
+		min-height: 400px;
+	}
+
+}
+
+@media (max-width: $low-mobile-size) {
+	.tabs-info__item-caption {
+		min-width: 280px;
+	}
+
+	.tabs-info__item-comment {
+		width: auto;
+		margin-left: 24px;
+		margin-right: 24px;
+		margin-top: 0;
+		top: -360px;
+	}
+
+	.tabs-info__item-wrapper-image {
+		width: 100%;
+	}
+
+	.tabs-info__item-comment-title {
+		font-size: 20px;
+		text-align: center;
+	}
+
+	.tabs-info__item-comment-title::before {
+		margin-left: 6px;
+	}
+
+	.tabs-info__item-comment-caption {
+		text-align: center;
+	}
+
+	.tabs-info__item-comment-autor {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: auto;
+	}
+
+	.tabs-info__item-comment-autor img {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}

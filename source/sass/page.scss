@@ -1,0 +1,19 @@
+.page {
+  font-family: "Montserrat", "Arial", sans-serif;
+  line-height: 28px;
+  height: 100%;
+}
+
+.page-body {
+	min-height: 100%;
+  margin: 0;
+}
+
+.page-body a {
+	text-decoration: none;
+	color: $basic-black;
+}
+
+.page-body--noscroll {
+	overflow: hidden;
+}

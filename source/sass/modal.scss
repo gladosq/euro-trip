@@ -1,0 +1,155 @@
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 728px;
+	height: 444px;
+	background: $menu-background-color;
+	z-index: 20;
+}
+
+.modal__wrapper {
+	display: flex;
+	position: relative;
+}
+
+.modal__form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	margin: auto;
+	height: 340px;
+}
+
+.modal__form-title {
+	@include fonts(600, 25px, $menu-color);
+	position: relative;
+}
+
+.modal__form-input {
+	@include fonts(400, 14px, $basic-black);
+	font-family: inherit;
+	width: 249px;
+	height: 50px;
+	border: 1px solid $border-color;
+	padding-left: 36px;
+}
+
+.modal__form-input[name="modal__input-email"] {
+	padding-left: 16px;
+	width: 267px;
+}
+
+.modal__form-input[name="modal__input-email"] + label::before {
+	content: "+7";
+	position: absolute;
+	left: 400px;
+	top: 155px;
+}
+
+.modal__form-input[name="modal__input-email"] + label::after {
+	content: "*";
+	color: $button-color;
+	position: absolute;
+	left: 396px;
+	top: 144px;
+}
+
+.modal__form-button {
+	@include fonts(700, 12px, $basic-white);
+	font-family: inherit;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	background: $button-color;
+	border: 0;
+	padding: 10px 44px;
+	cursor: pointer;
+	margin-bottom: 50px;
+
+}
+
+.modal__form-close {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	right: 10px;
+	top: 10px;
+	background: transparent;
+	border: none;
+	opacity: 0.3;
+	cursor: pointer;
+}
+
+.modal__form-close:hover {
+	opacity: 0.5;
+}
+
+.modal__form-close::before,
+.modal__form-close::after {
+	content: "";
+	position: absolute;
+	left: -2px;
+	width: 30px;
+	height: 1px;
+	background: $basic-black; 
+}
+
+.modal__form-close::before {
+	transform: rotate(-45deg);
+}
+
+.modal__form-close::after {
+	transform: rotate(45deg);
+}
+
+.modal__form-title--invalid::before {
+	@include fonts(400, 12px, $button-color);
+	content: "Данные не верны";
+	top: 40px;
+	left: -70px;
+	position: absolute;
+}
+
+@media (max-width: $mobile-size) {
+	.modal {
+		width: 100%;
+		height: 100%;
+		background: $basic-white;
+	}
+
+	.modal__wrapper {
+		margin-top: 120px;
+	}
+
+	.modal__image-background-wrapper {
+		display: none;
+	}
+
+	.modal__form {
+		position: relative;
+	}
+
+	.modal__form-close {
+		top: -110px;
+	}
+
+	.modal__form-button {
+		font-weight: 500;
+		font-size: 12px;
+		letter-spacing: 2px;
+		padding-left: 96px;
+		padding-right: 96px;
+	}
+
+	.modal__form-input[name="modal__input-email"] + label::before {
+		left: 10px;
+		top: 100px;
+	}
+
+	.modal__form-input[name="modal__input-email"] + label::after {
+		left: 8px;
+		top: 90px;
+	}
+}

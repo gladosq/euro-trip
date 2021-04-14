@@ -1,0 +1,126 @@
+.promo {
+	background: url('../img/photo-header-desktop.png');
+	background-color: #a1c8e2;
+	background-size: cover;
+  background-position: 50% 10%;
+}
+
+.promo__wrapper {
+	max-width: 1160px;
+	height: 860px;
+	margin: auto;
+	padding: 0 16px;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+}
+
+.promo__inner-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 40%;
+}
+
+.promo__title {
+	@include fonts(500, 55px, $basic-white, 80px);
+	max-width: 410px;
+	margin-top: -120px;
+	margin-bottom: 10px;
+	letter-spacing: -1px;
+}
+
+.promo__caption {
+	@include fonts(400, 16px, $basic-white);
+	letter-spacing: -0.47px;
+	margin-bottom: 30px;
+	max-width: 340px;
+}
+
+.promo__button {
+	@include fonts(700, 12px, $basic-white, 14px);
+	font-family: inherit;
+	max-width: 340px;
+	padding: 28px 0 28px 40px;
+	text-align: left;
+	border: none;
+	background: $button-color;
+	color: $basic-white;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	cursor: pointer;
+	position: relative;
+}
+
+.promo__button:hover {
+	background: $active-button;
+}
+
+.promo__button::before {
+	content: "";
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	background: url("../img/arrow-down.svg");
+	right: 30px;
+}
+
+@media (max-width: $tablet-size) {
+	.promo__button:focus {
+		background: $active-button;
+	}
+
+	.promo__wrapper {
+		height: 344px;
+	}
+
+	.promo__title {
+		font-size: 30px;
+		font-weight: 600;
+		margin-top: 20px;
+		margin-bottom: 0;
+	}
+
+	.promo__caption {
+		max-width: 400px;
+		margin-top: 0;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	.promo__button {
+		padding: 20px 90px 20px 40px;
+		font-weight: 500;
+		font-size: 10px;
+	}
+
+	.promo__inner-wrapper {
+		width: 100%;
+		align-items: center;
+	}
+}
+
+@media (max-width: $mobile-size) {
+	.promo__wrapper {
+		height: 235px;
+	}
+
+	.promo__title {
+		font-size: 24px;
+		line-height: 36px;
+		text-align: center;
+		padding-top: 270px;
+		padding-bottom: 100px;
+	}
+
+	.promo__caption {
+		color: $basic-half-black;
+		letter-spacing: -0.47px;
+	}
+
+	.promo__button {
+		padding: 18px 152px 18px 26px;
+		max-width: 288px;
+	}
+
+}

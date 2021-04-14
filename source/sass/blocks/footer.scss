@@ -1,0 +1,257 @@
+.footer__wrapper {
+	max-width: 1160px;
+	margin: auto;
+	padding: 0 16px 60px;
+	display: flex;
+}
+
+.footer__wrapper div {
+	width: 33%;
+}
+
+.footer__future-title,
+.footer__contacts-title,
+.footer__corporate-title {
+	@include fonts(600, 18px, $basic-black, 32px);
+}
+
+.footer__future-title {
+	padding-left: 6px;
+}
+
+.footer__future-list {
+	@include fonts(400, 14px, $basic-black, 17px);
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	min-width: 360px;
+}
+
+.footer__future-item {
+	opacity: 0.5;
+	padding: 6px 6px 4px 6px;
+}
+
+.footer__contacts {
+	padding-left: 130px;
+}
+
+.footer__contacts a {
+	color: $button-color;
+	text-decoration: underline;
+}
+
+.footer__contacts-mail {
+	@include fonts(400, 14px, $button-color, 17px);
+	display: inline-block;
+	padding-bottom: 16px;
+	padding-left: 40px;
+	position: relative;
+}
+
+.footer__contacts-mail::before {
+	content: "";
+	position: absolute;
+	width: 26px;
+	height: 20px;
+	left: 0;
+	background: url("../img/mail-icon.svg");
+}
+
+.footer__contacts-tele {
+	padding-left: 40px;
+	position: relative;
+}
+
+.footer__contacts-tele::before {
+	content: "";
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 5px;
+	background: url("../img/phone-contacts-icon.svg");
+	background-repeat: no-repeat;
+}
+
+.footer__corporate-caption {
+	@include fonts(400, 14px, $basic-black, 23px);
+	opacity: 0.5;
+}
+
+.footer__contacts-mail-tablet {
+	display: none;
+}
+
+.footer__future-container {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+}
+
+@media (max-width: $tablet-size) {
+	.footer__wrapper {
+		display: grid;
+		grid-template-areas:
+      "future contacts"
+      "corp corp";
+		padding-top: 100px;
+		grid-template-columns: 60% 40%;
+		position: relative;
+	}
+
+	.footer__wrapper::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		background: linear-gradient(to left, transparent 2%, $border-color 3%, $border-color 97%, transparent 98%);
+		bottom: 200px;
+	}
+
+	.footer__wrapper div {
+		width: 100%;
+	}
+
+	.footer__future {
+		grid-area: future;
+		position: relative;
+	}
+
+	.footer__future::before {
+		content: "";
+		position: absolute;
+		width: 1px;
+		height: 177px;
+		background: $border-color;
+		right: 41px;
+		top: 20px;
+	}
+
+	.footer__future-list {
+		max-width: 400px;
+	}
+
+	.footer__contacts {
+		grid-area: contacts;
+		padding-left: 0;
+	}
+
+	.footer__corporate {
+		grid-area: corp;
+		text-align: center;
+	}
+
+	.footer__corporate-title {
+		margin-top: 60px;
+	}
+
+	.footer__corporate-caption {
+		max-width: 700px;
+		margin: auto;
+		margin-bottom: 30px;
+	}
+
+	.footer__contacts-mail-tablet {
+		display: block;
+	}
+
+	.footer__contacts-mail-desktop {
+		display: none;
+	}
+}
+
+@media (max-width: $mobile-size) {
+	.header__nav-button--opened {
+		right: -14px;
+	}
+
+	.footer__wrapper {
+		display: flex;
+		flex-direction: column;
+		padding-top: 40px;
+		padding: 40px 0 20px;
+	}
+
+	.footer__future::before {
+		background: none;
+
+
+	}
+
+	.footer__future-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		min-width: 200px;
+		margin: auto;
+		height: 300px;
+		position: relative;
+	}
+
+	.footer__future-list::before {
+		content: "";
+		position: absolute;
+		height: 1px;
+		width: 76%;
+		bottom: -20px;
+		background: $border-color;
+	}
+
+	.footer__future-container {
+		min-width: 126px;
+		text-align: center;
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		margin: auto;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	.footer__future-title {
+		text-align: center;
+		padding-left: 0;
+	}
+
+	.footer__contacts-title {
+		padding-top: 38px;
+	}
+
+	.footer__contacts {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+	}
+
+	.footer__contacts-tele {
+		margin-top: -24px;
+	}
+
+	.footer__wrapper::before {
+		background: none;
+	}
+
+	.footer__future-list::after {
+		content: "";
+		position: absolute;
+		width: 76%;
+		height: 1px;
+		bottom: -190px;
+		background: $border-color;
+	}
+
+	.footer__corporate-caption {
+		max-width: 100%;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-bottom: 10px;
+
+
+	}
+
+
+
+}

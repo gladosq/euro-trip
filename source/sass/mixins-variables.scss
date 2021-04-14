@@ -1,0 +1,24 @@
+/* Colors */
+$black: #000000;
+$basic-black: #141517;
+$basic-half-black: #2C2E3F;
+$basic-white: #FFFFFF;
+$button-color: #FE7865;
+$border-color: rgba(44, 46, 63, 0.3);
+$menu-color: #48494D;
+$menu-background-color: #FBF8F8;
+$active-button: #F17D4B;
+
+/* Breakpoints */
+$low-mobile-size: 580px;
+$mobile-size: 767px;
+$tablet-size: 1023px;
+$half-desktop-size: 1200px;
+
+/* Fonts */
+@mixin fonts($font-weight: 400, $font-size: 14px, $font-color: $basic-white, $line-height: 28px) {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  color: $font-color;
+  line-height: $line-height;
+}
