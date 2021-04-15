@@ -1,4 +1,4 @@
-Project "Euro-trip"
+Project **"Euro-trip"**
 
 Previews:
 [Demo](https://gladosq.github.io/Euro-trip/)
