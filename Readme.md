@@ -1,2 +1,1 @@
 Euro-trip project
-Autor
